@@ -1,0 +1,14 @@
+{
+  "name": "language-manifest",
+  "version": "0.0.0",
+  "description": "A syntax highlight for general purpose manifest",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/jkamenik/language-manifest",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
