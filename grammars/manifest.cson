@@ -3,12 +3,44 @@
 
 'scopeName': 'source.manifest'
 'name': 'Manifest'
-'fileTypes': [
-  'extension'
-]
+'fileTypes': []
+'firstLineMatch': "^\\s*# :-- manifest --:"
+# 'foldingStartMarker': "^\\s*#\\s*--"
+# 'foldingStopMarker': "^\s*$"
 'patterns': [
   {
-    'match': '^\\s*@@.*$'
-    'name': 'comment'
+    'match': '^\\s*#[^\\-]{2}.*$'
+    'name': 'comment.manifest'
+  },
+  {
+    'match': '^\\s*(#--)(.*)$'
+    'captures': {
+      '0': {
+        'name': 'comment.manifest'
+      }
+      '2': {
+        'name': 'heading.manifest'
+      }
+    }
+  }
+  {
+    'match': '^\\s*([a-zA-Z0-9\\-]+)\\s+([^\\s]+)\\s+([^\\s]+)\\s+(.+)$'
+    'captures': {
+      '0': {
+        'name': 'line.manifest'
+      },
+      '1': {
+        'name': 'keyword.control.manifest'
+      },
+      '2': {
+        'name': 'variable.manifest'
+      }
+      '3': {
+        'name': 'constant.numeric.manifest'
+      }
+      '4': {
+        'name': 'string.manifest'
+      }
+    }
   }
 ]
