@@ -1,4 +1,4 @@
-# Manifest Language Syntax
+# Manifest Language Atom Syntax
 
 The Manifest language is very simply a list of lines.  Each line is ether whitespace (ignored), a comment (starts with #), or defines an item.
 
